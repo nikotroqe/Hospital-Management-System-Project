@@ -21,7 +21,9 @@ public class StaffService {
     public List<Staff> getAllStaff(){
         return sRepo.findAll();
     }
-
+    public Staff getStaffById(int id){
+        return sRepo.findById(id).get();
+    }
     public void deleteById(int id) {
         sRepo.deleteById(id);
     }

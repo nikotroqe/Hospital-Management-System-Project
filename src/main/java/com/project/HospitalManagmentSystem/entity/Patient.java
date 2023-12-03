@@ -12,14 +12,14 @@ public class Patient {
     private String fname;
     private String lname;
     private String emailaddress;
-    private String phonenumber;
+    private Long phonenumber;
     private LocalDate birthdate;
-    private Integer age;
+    private Long age;
     private String gender;
     private String city;
     private String bloodgroup;
 
-    public Patient(Integer id, String fname, String lname, String emailaddress, String phonenumber, LocalDate birthdate,Integer age, String gender,String city, String bloodgroup) {
+    public Patient(Integer id, String fname, String lname, String emailaddress, Long phonenumber, LocalDate birthdate,Long age, String gender,String city, String bloodgroup) {
         super();
         this.id = id;
         this.fname = fname;
@@ -68,11 +68,11 @@ public class Patient {
         this.emailaddress = emailaddress;
     }
 
-    public String getPhonenumber() {
+    public Long getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhonenumber(String phonenumber) {
+    public void setPhonenumber(Long phonenumber) {
         this.phonenumber = phonenumber;
     }
 
@@ -84,11 +84,11 @@ public class Patient {
         this.birthdate = birthdate;
     }
 
-    public Integer getAge() {
+    public Long getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(Long age) {
         this.age = age;
     }
 

@@ -7,45 +7,44 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
 
 @Controller
 public class StaffController {
     @Autowired
     private StaffService staffService;
 
+    //Add Staff
     @GetMapping("/add_doctor")
     public String addDoctor(){
         return "add_doctor";
     }
 
-    @GetMapping("/list_doctor")
-    public String getAllStaff(Model m){
-        return findPaginated(0,m);
-    }
-    @GetMapping("/list_doctor")
-    public ModelAndView getAllStaff(Model m){
-        List<Staff>list=staffService.getAllStaff();
-        return new ModelAndView("list_doctor","staff",list);
-    }
 
+    //Save to list after adding
     @PostMapping("/save")
     public String addStaff(@ModelAttribute Staff s){
         System.err.println(s);
         staffService.save(s);
         return "redirect:/list_doctor";
     }
+    //Edit
+    @RequestMapping("/edit_doctor/{id}")
+    public String editStaff(@PathVariable("id") int id,Model model) {
+        Staff s=staffService.getStaffById(id);
+        model.addAttribute("staff",s);
+        return "edit_doctor";
+    }
+    //Delete list
     @RequestMapping("/delete_doctor/{id}")
     public String deleteStaff(@PathVariable("id")int id) {
         staffService.deleteById(id);
         return "redirect:/list_doctor";
     }
-    @GetMapping("/page/{pagenation1}")
-    public String findPaginated(@PathVariable int pagenation1, Model m){
+    @GetMapping("/list_doctor")
+    public String findPaginated(@RequestParam(name = "page",defaultValue = "0") int pagenation1, Model m){
         Page<Staff> stafflist=staffService.getStaffByPagination(pagenation1, 5);
-        m.addAttribute("book", stafflist);
+        m.addAttribute("staff", stafflist);
         m.addAttribute("currentPage", pagenation1);
         m.addAttribute("totalPages", stafflist.getTotalPages());
         m.addAttribute("totalItem", stafflist.getTotalElements());

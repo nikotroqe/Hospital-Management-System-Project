@@ -21,3 +21,27 @@ VALUES (1, 'Adrian', 'Bajrami', 'adrian.bajrami@spital.com', 355692345678, '1985
  (18, 'Teuta', 'Leka', 'teuta.leka@spital.com', 355522345678, '2002-06-18', 21, 'Femër', 'Tiranë', 'Farmaciste', 'Menaxhere e barnave'),
  (19, 'Valon', 'Rexha', 'valon.rexha@spital.com', 355512345678, '2003-07-19', 20, 'Mashkull', 'Tiranë', 'Laborant', 'Analist i mostrave'),
  (20, 'Zana', 'Kadriu', 'zana.kadriu@spital.com', 355502345678, '2004-08-20', 19, 'Femër', 'Tiranë', 'Laborante', 'Analiste e mostrave')
+
+INSERT INTO Patient (id, fname, lname, emailaddress, phonenumber, birthdate, age, gender, city, bloodgroup)
+VALUES (1, 'Arben', 'Kola', 'arben.kola@gmail.com', 355692345678, '1990-01-15', 33, 'Male', 'Tirana', 'A+'),
+(2, 'Ermira', 'Gjoni', 'ermira.gjoni@yahoo.com', 355672345678, '1992-05-23', 31, 'Female', 'Durrës', 'B-'),
+(3, 'Florin', 'Rama', 'florin.rama@hotmail.com', 355682345678, '1989-09-12', 34, 'Male', 'Elbasan', 'AB+'),
+(4, 'Genta', 'Leka', 'genta.leka@outlook.com', 355692345678, '1991-03-07', 32, 'Female', 'Shkodër', 'O-'),
+(5, 'Ilir', 'Berisha', 'ilir.berisha@gmail.com', 355672345678, '1990-07-19', 33, 'Male', 'Fier', 'A-'),
+(6, 'Jona', 'Çela', 'jona.cela@yahoo.com', 355682345678, '1993-11-04', 30, 'Female', 'Korçë', 'B+'),
+(7, 'Klajdi', 'Marku', 'klajdi.marku@hotmail.com', 355692345678, '1988-12-25', 35, 'Male', 'Vlorë', 'AB-'),
+(8, 'Linda', 'Zogu', 'linda.zogu@outlook.com', 355672345678, '1992-06-14', 31, 'Female', 'Gjirokastër', 'O+'),
+(9, 'Marsel', 'Hoxha','marsel.hoxha@gmail.com', 355682345678, '1991-02-28', 32, 'Male', 'Berat', 'A+'),
+(10, 'Nora', 'Dervishi', 'nora.dervishi@yahoo.com', 355692345678, '1990-08-31', 33, 'Female', 'Lushnjë', 'B-'),
+(11, 'Orion', 'Kurti', 'orion.kurti@hotmail.com', 355672345678, '1989-10-10', 34, 'Male', 'Sarandë', 'AB+'),
+(12, 'Rezarta', 'Mema', 'rezarta.mema@outlook.com', 355682345678, '1993-04-16', 30, 'Female', 'Lezhë', 'O-'),
+(13, 'Saimir', 'Kadriu', 'saimir.kadriu@gmail.com', 355692345678, '1990-01-01', 33, 'Male', 'Pogradec', 'A-'),
+(14, 'Teuta', 'Basha', 'teuta.basha@yahoo.com', 355672345678, '1992-07-07', 31, 'Female', 'Kukës', 'B+'),
+(15, 'Xhulio', 'Rexhepi', 'xhulio.rexhepi@hotmail.com', 355682345678, '1988-11-11', 35, 'Male', 'Tropojë', 'AB-')
+
+ INSERT INTO Appointment (id, fullname, emailaddress, phonenumber, diseases, appointmentdate, docname, fulladdress)
+ VALUES (1, 'Arben Kola', 'arben.kola@gmail.com', 355692345678, 'Diabetes, Hypertension', '2023-11-10 09:00:00', 'Dr. Ermira Gjoni', 'Rruga e Kavajës, Nr. 15, Tirana'),
+ (2, 'Ermira Gjoni', 'ermira.gjoni@yahoo.com', 355672345678, 'Asthma, Allergy', '2023-11-11 10:00:00', 'Dr. Florin Rama', 'Bulevardi Zogu I, Nr. 23, Durrës'),
+ (3, 'Florin Rama', 'florin.rama@hotmail.com', 355682345678, 'Arthritis, Migraine', '2023-11-12 11:00:00', 'Dr. Genta Leka', 'Rruga e Elbasanit, Nr. 34, Elbasan'),
+ (4, 'Genta Leka', 'genta.leka@outlook.com', 355692345678, 'Anemia, Depression', '2023-11-13 12:00:00', 'Dr. Ilir Berisha', 'Rruga e Skënderbeut, Nr. 45, Shkodër'),
+ (5, 'Ilir Berisha', 'ilir.berisha@gmail.com', 355672345678, 'Cancer, Anxiety', '2023-11-14 13:00:00', 'Dr. Jona Çela', 'Rruga e Fierit, Nr. 56, Fier')

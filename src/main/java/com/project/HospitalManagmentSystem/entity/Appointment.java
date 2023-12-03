@@ -11,13 +11,13 @@ public class Appointment {
         private Integer id;
         private String fullname;
         private String emailaddress;
-        private String phonenumber;
+        private Long phonenumber;
         private String diseases;
         private LocalDateTime appointmentdate;
         private String docname;
         private String fulladdress;
 
-        public Appointment(Integer id, String fullname, String emailaddress, String phonenumber,String diseases, LocalDateTime appointmentdate, String docname, String fulladdress) {
+        public Appointment(Integer id, String fullname, String emailaddress, Long phonenumber,String diseases, LocalDateTime appointmentdate, String docname, String fulladdress) {
                 super();
                 this.id = id;
                 this.fullname = fullname;
@@ -56,11 +56,11 @@ public class Appointment {
                 this.emailaddress = emailaddress;
         }
 
-        public String getPhonenumber() {
+        public Long getPhonenumber() {
                 return phonenumber;
         }
 
-        public void setPhonenumber(String phonenumber) {
+        public void setPhonenumber(Long phonenumber) {
                 this.phonenumber = phonenumber;
         }
 
